@@ -25,11 +25,15 @@ public class LoginBRA extends MainTestCase{
 				BasePage myBasePage = lp.logIn(Util.getProperty("cUsernameBR"), Util.getProperty("cOrgIDBR"), Util.getProperty("cPasswordBR"), BasePage.class);
 				
 				//3. Get Current RoleName of User Logged
-				currentRoleNameUserLogged = myBasePage.getRoleNameUserLogged();
+				currentRoleNameUserLogged = myBasePage.getRoleNameUserLogged("BR");
 				System.out.println("Msje Welcome Brasil: " + currentRoleNameUserLogged);
 				
 				//4. Check the RoleName with expected value
 				AssertJUnit.assertEquals(expectedRoleNameUserLogged, currentRoleNameUserLogged);
+				
+				//5. Take evidence
+				 Util util = new Util();
+				 util.TakeScreenShot(driver(), "LOGIN_BRA_SUCCESS");
 				
 			} catch (Exception e) {
 				e.printStackTrace();

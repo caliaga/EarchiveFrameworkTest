@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite TestCases Taller" duration-ms="166701" started-at="2013-10-23T22:29:40Z" finished-at="2013-10-23T22:32:27Z">
+    <groups>
+    </groups>
+    <test name="TestCases Christian" duration-ms="166701" started-at="2013-10-23T22:29:40Z" finished-at="2013-10-23T22:32:27Z">
+      <class name="ariba.earchive.framework.tests.LoginEUR">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:ariba.earchive.framework.tests.LoginEUR@2c6d1158]" name="setUp" is-config="true" duration-ms="4022" started-at="2013-10-23T17:31:11Z" finished-at="2013-10-23T17:31:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="LoginUserEuropeOK()[pri:0, instance:ariba.earchive.framework.tests.LoginEUR@2c6d1158]" name="LoginUserEuropeOK" duration-ms="14346" started-at="2013-10-23T17:31:15Z" finished-at="2013-10-23T17:31:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginUserEuropeOK -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ariba.earchive.framework.tests.LoginEUR@2c6d1158]" name="tearDown" is-config="true" duration-ms="1018" started-at="2013-10-23T17:31:29Z" finished-at="2013-10-23T17:31:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ariba.earchive.framework.tests.LoginEUR -->
+      <class name="ariba.earchive.framework.tests.WBSearchBySupplierName">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:ariba.earchive.framework.tests.WBSearchBySupplierName@47862525]" name="setUp" is-config="true" duration-ms="4008" started-at="2013-10-23T17:30:07Z" finished-at="2013-10-23T17:30:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="SearchBySupplierNameOK()[pri:0, instance:ariba.earchive.framework.tests.WBSearchBySupplierName@47862525]" name="SearchBySupplierNameOK" duration-ms="58718" started-at="2013-10-23T17:30:11Z" finished-at="2013-10-23T17:31:10Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unable to find element with id == ctl00_DefaultContent_rgvWBData_ctl00 (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 309 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.29.0', revision: '58258c3', time: '2013-01-17 22:47:00'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_40'
+Session ID: 6e7c7e6a-001d-443b-be3c-c0ebb27e7702
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=8, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:43575/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unable to find element with id == ctl00_DefaultContent_rgvWBData_ctl00 (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 309 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.29.0', revision: '58258c3', time: '2013-01-17 22:47:00'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_40'
+Session ID: 6e7c7e6a-001d-443b-be3c-c0ebb27e7702
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=8, ie.usePerProcessProxy=false, ignoreProtectedModeSettings=false, cssSelectorsEnabled=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:43575/, handlesAlerts=true, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at ariba.earchive.framework.tests.WBSearchBySupplierName.SearchBySupplierNameOK(WBSearchBySupplierName.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchBySupplierNameOK -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ariba.earchive.framework.tests.WBSearchBySupplierName@47862525]" name="tearDown" is-config="true" duration-ms="1080" started-at="2013-10-23T17:31:10Z" finished-at="2013-10-23T17:31:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ariba.earchive.framework.tests.WBSearchBySupplierName -->
+      <class name="ariba.earchive.framework.tests.WBSearchByCountrySupplier">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:ariba.earchive.framework.tests.WBSearchByCountrySupplier@64747ce6]" name="setUp" is-config="true" duration-ms="3965" started-at="2013-10-23T17:31:30Z" finished-at="2013-10-23T17:31:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="searhByCountrySupplier()[pri:0, instance:ariba.earchive.framework.tests.WBSearchByCountrySupplier@64747ce6]" name="searhByCountrySupplier" duration-ms="51817" started-at="2013-10-23T17:31:34Z" finished-at="2013-10-23T17:32:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searhByCountrySupplier -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ariba.earchive.framework.tests.WBSearchByCountrySupplier@64747ce6]" name="tearDown" is-config="true" duration-ms="1027" started-at="2013-10-23T17:32:26Z" finished-at="2013-10-23T17:32:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ariba.earchive.framework.tests.WBSearchByCountrySupplier -->
+      <class name="ariba.earchive.framework.tests.LoginBRA">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:ariba.earchive.framework.tests.LoginBRA@1bb41390]" name="setUp" is-config="true" duration-ms="3911" started-at="2013-10-23T17:29:40Z" finished-at="2013-10-23T17:29:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="LoginUserBrasilOk()[pri:0, instance:ariba.earchive.framework.tests.LoginBRA@1bb41390]" name="LoginUserBrasilOk" duration-ms="21737" started-at="2013-10-23T17:29:44Z" finished-at="2013-10-23T17:30:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginUserBrasilOk -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ariba.earchive.framework.tests.LoginBRA@1bb41390]" name="tearDown" is-config="true" duration-ms="1031" started-at="2013-10-23T17:30:06Z" finished-at="2013-10-23T17:30:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ariba.earchive.framework.tests.LoginBRA -->
+    </test> <!-- TestCases Christian -->
+  </suite> <!-- Suite TestCases Taller -->
+</testng-results>

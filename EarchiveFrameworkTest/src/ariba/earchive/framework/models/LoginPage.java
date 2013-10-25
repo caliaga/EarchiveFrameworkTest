@@ -15,6 +15,7 @@ public class LoginPage {
 	String loginButtonXPath = Util.getProperty("XPATH_BUTTON_LOGIN");
 	String logoutButtonXPath = Util.getProperty("XPATH_BUTTON_LOGOFF");
 	String xLnkRole = Util.getProperty("XPATH_ROLE");
+	String xImgGeneral = Util.getProperty("XPATH_IMG_GENERAL");
 	
 	
 	//Constructor
@@ -50,7 +51,7 @@ public class LoginPage {
 	
 	public void clickLogin(){
 		Util myUtil = new Util();
-		myUtil.clickAndWait(loginDriver, loginButtonXPath, xLnkRole);
+		myUtil.clickAndWait(loginDriver, loginButtonXPath, xImgGeneral);
 	}
 	
 	/** Method to Send Large Data to input text/textArea

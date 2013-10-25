@@ -40,16 +40,23 @@ public class WorkBenchPage {
 		endDate.sendKeys(endDateIn);
 	}
 	
+	private void selectSuplierName(String name) throws InterruptedException
+	{
+		Util myUtil = new Util();
+		myUtil.SetValueCombo(workBenchDriver, "ctl00_DefaultContent_cmbSupplierName", name);
+	}
+	
+	
 	private void selectBuyerCountry(String country) throws InterruptedException
 	{
 		Util myUtil = new Util();
-		myUtil.SetValueCombo(workBenchDriver, "ctl00_DefaultContent_cmbBuyerCountry_DropDown", country);
+		myUtil.SetValueCombo(workBenchDriver, "ctl00_DefaultContent_cmbBuyerCountry", country);
 	}
 	
 	private void selectSupplierCountry(String country) throws InterruptedException
 	{
 		Util myUtil = new Util();
-		myUtil.SetValueCombo(workBenchDriver, "ctl00_DefaultContent_cmbSupplierCountry_DropDown", country);
+		myUtil.SetValueCombo(workBenchDriver, "ctl00_DefaultContent_cmbSupplierCountry", country);
 	}
 	
 	private void selectDocumentType(String docType) throws InterruptedException
@@ -97,10 +104,11 @@ public class WorkBenchPage {
 	 * @author caliaga
 	 * @param country - String: Country of Supplier.
 	 */
-	public String searchBySupplierCountry(String country) throws Exception
+	public String searchBySupplierCountry(String country, String startDateIn,String endDateIn  ) throws Exception
 	{
 		String valueFinded;
-		
+		this.setStartDate(startDateIn);
+		this.setEndDate(endDateIn);
 		this.selectSupplierCountry(country);
 		this.clickSearch();
 		valueFinded = Util.getValueGrid(workBenchDriver, IdTableWB, 1, 3);
@@ -133,6 +141,22 @@ public class WorkBenchPage {
 		this.selectDocumentType(invoiceType);
 		this.clickSearch();
 		valueFinded = Util.getValueGrid(workBenchDriver, IdTableWB, 1, 3);
+		return valueFinded;		
+	}
+	
+	/** Search Invoice(s) By SupplierName
+	 * @author jbarbaran
+	 * @param name - String: name of supplier
+	 */
+	public String searchBySupplierName(String name, String startDateIn, String endDateIn ) throws Exception
+	{
+		String valueFinded;
+		
+		this.selectSuplierName(name);
+		this.setStartDate(startDateIn);
+		this.setEndDate(endDateIn);
+		this.clickSearch();
+		valueFinded = Util.getValueGrid(workBenchDriver, IdTableWB, 8, 3);
 		return valueFinded;		
 	}
 	

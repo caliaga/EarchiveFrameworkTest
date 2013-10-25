@@ -8,7 +8,7 @@ import ariba.earchive.framework.common.Util;
 
 public class BasePage {
 	WebDriver basePageDriver = null;
-	String xLnkRole = Util.getProperty("XPATH_ROLE");
+	
 	String xBtnLogout = Util.getProperty("XPATH_BUTTON_LOGOFF");
 	
 	public BasePage(WebDriver driver){
@@ -19,11 +19,23 @@ public class BasePage {
 	 * @author caliaga
 	 * @return RoleName String
 	 */
-	public String getRoleNameUserLogged() throws InterruptedException
+	public String getRoleNameUserLogged(String region) throws InterruptedException
 	{
-		//Util.moveClickElement(basePageDriver, xLnkRole);
+		String xLnkRole="";
+		if(region=="BR")
+		{
+			xLnkRole= Util.getProperty("XPATH_ROLE");
+		}
+		else if(region=="EUR")
+		{
+			xLnkRole= Util.getProperty("XPATH_ROLE_EUR");
+		}
+		
+		System.out.println(region);
+		
+		Util.moveClickElement(basePageDriver, xLnkRole);
 		Util myUtil = new Util();
-		myUtil.clickAndWait(basePageDriver, xLnkRole, xBtnLogout);
+		myUtil.clickAndWaitRole(basePageDriver, xBtnLogout);
 		WebElement ObjUsertext = basePageDriver.findElement(By.id("ctl00_lblRoleName"));
 		String UserText = ObjUsertext.getText();
 		return UserText;

@@ -1,5 +1,7 @@
 package ariba.earchive.framework.setup;
 
+//import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -10,11 +12,13 @@ public class MainTestCase {
 	
 	DriverFactory driverFactory = null;
 	
+	
 	@Parameters({"browser"})
 	
 	@BeforeClass
 	protected void setUp(String browser)
 	{
+		
 		driverFactory = new DriverFactory();
 		driverFactory.getDriver(browser);
 	}

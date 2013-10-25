@@ -27,11 +27,15 @@ public class LoginEUR extends MainTestCase{
 				BasePage myBasePage = lp.logIn(Util.getProperty("cUsername"), Util.getProperty("cOrgID"), Util.getProperty("cPassword"), BasePage.class);
 				
 				//3. Get Current RoleName of User Logged
-				currentRoleNameUserLogged = myBasePage.getRoleNameUserLogged();
+				currentRoleNameUserLogged = myBasePage.getRoleNameUserLogged("EUR");
 				System.out.println("Msje Welcome EUR: " + currentRoleNameUserLogged);
 				
 				//4. Check the RoleName with expected value
 				AssertJUnit.assertEquals(expectedRoleNameUserLogged, currentRoleNameUserLogged);
+				
+				//5. Take evidence
+				 Util util = new Util();
+				 util.TakeScreenShot(driver(), "LOGIN_EUR_SUCCESS");
 				
 			} catch (Exception e) {
 				e.printStackTrace();

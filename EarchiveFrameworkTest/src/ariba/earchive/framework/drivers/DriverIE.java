@@ -1,5 +1,6 @@
 package ariba.earchive.framework.drivers;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -11,8 +12,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class DriverIE extends Driver {
 
+	
+
+	
 	@Override
 	public WebDriver instanceDriver() {
+		File file = new File("C:\\driver\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 		driver = new InternetExplorerDriver();
 		return driver;
 	}

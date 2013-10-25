@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite TestCases Taller" parallel="none">
+  <test name="TestCases Christian">
+  	<parameter name="browser" value="IE"></parameter>
+    <classes>
+         <class name='ariba.earchive.framework.tests.LoginBRA'></class>
+         <class name='ariba.earchive.framework.tests.WBSearchBySupplierName'></class>
+    	<class name='ariba.earchive.framework.tests.LoginEUR'></class>
+    	<class name='ariba.earchive.framework.tests.WBSearchByCountrySupplier'></class>
+	    <!--
+	    <class name='ariba.earchive.framework.tests.WBSearchBySupplierName'></class>
+	    -->
+    </classes>
+  </test>
+</suite> <!-- Suite -->

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite TestCases Taller]" parallel="none">
+  <parameter name="browser" value="IE"/>
+  <test name="TestCases Christian(failed)" parallel="none">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="ariba.earchive.framework.tests.WBSearchBySupplierName">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="SearchBySupplierNameOK"/>
+        </methods>
+      </class> <!-- ariba.earchive.framework.tests.WBSearchBySupplierName -->
+      <class name="ariba.earchive.framework.tests.LoginEUR">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- ariba.earchive.framework.tests.LoginEUR -->
+      <class name="ariba.earchive.framework.tests.WBSearchByCountrySupplier">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- ariba.earchive.framework.tests.WBSearchByCountrySupplier -->
+      <class name="ariba.earchive.framework.tests.LoginBRA">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- ariba.earchive.framework.tests.LoginBRA -->
+    </classes>
+  </test> <!-- TestCases Christian(failed) -->
+</suite> <!-- Failed suite [Suite TestCases Taller] -->

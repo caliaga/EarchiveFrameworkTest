@@ -1,5 +1,6 @@
 package ariba.earchive.framework.drivers;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -12,6 +13,8 @@ public class DriveChrome extends Driver {
 
 	@Override
 	public WebDriver instanceDriver() {
+		File file = new File("C:\\driverchrome\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 		driver = new ChromeDriver();
 		return driver;
 	}

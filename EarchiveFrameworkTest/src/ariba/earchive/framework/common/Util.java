@@ -106,7 +106,21 @@ public class Util {
 		waitForElementPresent(driver, expectedElementXpath);
 	}
 	
-	
+	/**
+	 * This method clicks a web element and wait for another one to be displayed
+	 * in the screen before selenium continues to run the test case.
+	 * @param driver
+	 * @param xpath
+	 * @throws InterruptedException
+	 */
+	public void clickAndWaitRole(WebDriver driver, String expectedElementXpath){
+		By byElem = By.linkText("Role");
+		WebElement element = driver.findElement(byElem);
+		Actions builder = new Actions(driver);
+		builder.moveToElement(element);
+		element.click();
+		waitForElementPresent(driver, expectedElementXpath);
+	}
 	
 	/**
 	 * Makes a pause for the n seconds, then selenium replays the test sequence
@@ -279,7 +293,7 @@ public class Util {
 	 */
 	public void TakeScreenShot(WebDriver driver, String nameFile)
 	{
-		String Path = "C:\\test-output\\img\\" + nameFile + ".png";
+		String Path = "C:\\test-output\\img\\" + nameFile + ".jpg";
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(scrFile, new File(Path));
@@ -391,12 +405,16 @@ public class Util {
 	public void SetValueCombo(WebDriver driver, String nameComboBox, String valueSelected) throws InterruptedException{
 		
 		Actions action = new Actions(driver);
-		WebElement arrowCombo = driver.findElement(By.id("ctl00_DefaultContent_cmbBuyerCountry_Arrow"));
+		WebElement arrowCombo = driver.findElement(By.id(nameComboBox+"_Arrow"));
 		action.moveToElement(arrowCombo).build().perform();
 		arrowCombo.click();
 		Thread.sleep(3000);
 		
-		List<WebElement> allElements = driver.findElements(By.xpath("//div[@id='" + nameComboBox + "']/div/ul/li")); 
+		//ctl00_DefaultContent_cmbSupplierCountry_Arrow
+		
+		//ctl00_DefaultContent_cmbSupplierCountry_DropDown
+		
+		List<WebElement> allElements = driver.findElements(By.xpath("//div[@id='" + nameComboBox + "_DropDown']/div/ul/li")); 
 
 		for (WebElement element: allElements) {
 		      //System.out.println(element.getText());
